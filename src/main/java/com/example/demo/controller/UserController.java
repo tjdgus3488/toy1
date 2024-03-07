@@ -17,12 +17,12 @@ public class UserController {
 
     private UserService userService;
 
-    @PostMapping("/join")
+    @PostMapping("/join") //회원가입
     public ResponseEntity<UserDto> joinUser(@RequestBody UserSignUpDto userSignUpDto) {
         return new ResponseEntity<>(userService.joinUser(userSignUpDto), HttpStatus.OK);
     }
 
-    @PostMapping("/login")
+    @PostMapping("/login") // 로그인
     public ResponseEntity<UserDto> loginUser(@RequestBody LoginDto loginDto) {
         return new ResponseEntity<>(userService.loginUser(loginDto), HttpStatus.OK);
     }
