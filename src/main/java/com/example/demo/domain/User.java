@@ -24,3 +24,4 @@ public class User {
     private String password;
     private String nickname;
 }
+//확인용
